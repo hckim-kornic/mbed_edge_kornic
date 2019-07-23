@@ -1,0 +1,2 @@
+/usr/bin/ar qc libedge-default-message-id-generator.a  CMakeFiles/edge-default-message-id-generator.dir/default_message_id_generator.c.o
+/usr/bin/ranlib libedge-default-message-id-generator.a

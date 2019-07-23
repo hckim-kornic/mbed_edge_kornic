@@ -1,0 +1,2 @@
+/usr/bin/ar qc libjsonrpc.a  CMakeFiles/jsonrpc.dir/lib/mbed-edge/lib/jsonrpc/jsonrpc.c.o
+/usr/bin/ranlib libjsonrpc.a

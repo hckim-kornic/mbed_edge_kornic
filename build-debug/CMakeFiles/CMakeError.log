@@ -1,0 +1,1841 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_751f4/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_751f4.dir/build.make CMakeFiles/cmTC_751f4.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_751f4.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_751f4.dir/CheckSymbolExists.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_751f4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_751f4.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_751f4.dir/CheckSymbolExists.c.o  -o cmTC_751f4 
+CMakeFiles/cmTC_751f4.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_751f4.dir/build.make:97: recipe for target 'cmTC_751f4' failed
+make[2]: *** [cmTC_751f4] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_751f4/fast' failed
+make[1]: *** [cmTC_751f4/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+File /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6ddd3/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_6ddd3.dir/build.make CMakeFiles/cmTC_6ddd3.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6ddd3.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_6ddd3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6ddd3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6ddd3.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_6ddd3.dir/CheckFunctionExists.c.o  -o cmTC_6ddd3 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_6ddd3.dir/build.make:97: recipe for target 'cmTC_6ddd3' failed
+make[2]: *** [cmTC_6ddd3] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_6ddd3/fast' failed
+make[1]: *** [cmTC_6ddd3/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining size of __int64 failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a2d2f/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a2d2f.dir/build.make CMakeFiles/cmTC_a2d2f.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a2d2f.dir/__INT64.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0    -o CMakeFiles/cmTC_a2d2f.dir/__INT64.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__INT64.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__INT64.c:17:22: error: ‘__int64’ undeclared here (not in a function)
+ #define SIZE (sizeof(__int64))
+                      ^
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__INT64.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_a2d2f.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_a2d2f.dir/__INT64.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_a2d2f.dir/__INT64.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a2d2f/fast' failed
+make[1]: *** [cmTC_a2d2f/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__INT64.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__int64))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __int32 failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_84aa7/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_84aa7.dir/build.make CMakeFiles/cmTC_84aa7.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_84aa7.dir/__INT32.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0    -o CMakeFiles/cmTC_84aa7.dir/__INT32.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__INT32.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__INT32.c:17:22: error: ‘__int32’ undeclared here (not in a function)
+ #define SIZE (sizeof(__int32))
+                      ^
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__INT32.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_84aa7.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_84aa7.dir/__INT32.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_84aa7.dir/__INT32.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_84aa7/fast' failed
+make[1]: *** [cmTC_84aa7/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__INT32.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__int32))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __uint32 failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f55b0/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_f55b0.dir/build.make CMakeFiles/cmTC_f55b0.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f55b0.dir/__UINT32.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0    -o CMakeFiles/cmTC_f55b0.dir/__UINT32.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__UINT32.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__UINT32.c:17:22: error: ‘__uint32’ undeclared here (not in a function)
+ #define SIZE (sizeof(__uint32))
+                      ^
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__UINT32.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_f55b0.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_f55b0.dir/__UINT32.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_f55b0.dir/__UINT32.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f55b0/fast' failed
+make[1]: *** [cmTC_f55b0/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__UINT32.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__uint32))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __uint16 failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8d15d/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_8d15d.dir/build.make CMakeFiles/cmTC_8d15d.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8d15d.dir/__UINT16.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0    -o CMakeFiles/cmTC_8d15d.dir/__UINT16.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__UINT16.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__UINT16.c:17:22: error: ‘__uint16’ undeclared here (not in a function)
+ #define SIZE (sizeof(__uint16))
+                      ^
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__UINT16.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_8d15d.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_8d15d.dir/__UINT16.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_8d15d.dir/__UINT16.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_8d15d/fast' failed
+make[1]: *** [cmTC_8d15d/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__UINT16.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__uint16))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __uint8 failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7ee9b/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_7ee9b.dir/build.make CMakeFiles/cmTC_7ee9b.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7ee9b.dir/__UINT8.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0    -o CMakeFiles/cmTC_7ee9b.dir/__UINT8.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__UINT8.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__UINT8.c:17:22: error: ‘__uint8’ undeclared here (not in a function)
+ #define SIZE (sizeof(__uint8))
+                      ^
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__UINT8.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_7ee9b.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_7ee9b.dir/__UINT8.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_7ee9b.dir/__UINT8.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_7ee9b/fast' failed
+make[1]: *** [cmTC_7ee9b/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/__UINT8.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__uint8))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of SSIZE_T failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_83219/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_83219.dir/build.make CMakeFiles/cmTC_83219.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_83219.dir/UPPERCASE_SSIZE_T.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0    -o CMakeFiles/cmTC_83219.dir/UPPERCASE_SSIZE_T.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/UPPERCASE_SSIZE_T.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/UPPERCASE_SSIZE_T.c:17:22: error: ‘SSIZE_T’ undeclared here (not in a function)
+ #define SIZE (sizeof(SSIZE_T))
+                      ^
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/UPPERCASE_SSIZE_T.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_83219.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_83219.dir/UPPERCASE_SSIZE_T.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_83219.dir/UPPERCASE_SSIZE_T.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_83219/fast' failed
+make[1]: *** [cmTC_83219/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/UPPERCASE_SSIZE_T.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(SSIZE_T))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function _strtoi64 exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ecc70/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_ecc70.dir/build.make CMakeFiles/cmTC_ecc70.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ecc70.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=_strtoi64   -o CMakeFiles/cmTC_ecc70.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ecc70
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ecc70.dir/link.txt --verbose=1
+/usr/bin/cc  -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=_strtoi64    CMakeFiles/cmTC_ecc70.dir/CheckFunctionExists.c.o  -o cmTC_ecc70 -rdynamic 
+CMakeFiles/cmTC_ecc70.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `_strtoi64'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ecc70.dir/build.make:97: recipe for target 'cmTC_ecc70' failed
+make[2]: *** [cmTC_ecc70] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_ecc70/fast' failed
+make[1]: *** [cmTC_ecc70/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file netinet/in6.h exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_aa220/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_aa220.dir/build.make CMakeFiles/cmTC_aa220.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_aa220.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing    -o CMakeFiles/cmTC_aa220.dir/CheckIncludeFile.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: netinet/in6.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTC_aa220.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_aa220.dir/CheckIncludeFile.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_aa220.dir/CheckIncludeFile.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_aa220/fast' failed
+make[1]: *** [cmTC_aa220/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file port.h exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4fe9d/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_4fe9d.dir/build.make CMakeFiles/cmTC_4fe9d.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4fe9d.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing    -o CMakeFiles/cmTC_4fe9d.dir/CheckIncludeFile.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:18: fatal error: port.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTC_4fe9d.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_4fe9d.dir/CheckIncludeFile.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_4fe9d.dir/CheckIncludeFile.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_4fe9d/fast' failed
+make[1]: *** [cmTC_4fe9d/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/devpoll.h exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7037c/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_7037c.dir/build.make CMakeFiles/cmTC_7037c.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7037c.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing    -o CMakeFiles/cmTC_7037c.dir/CheckIncludeFile.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/devpoll.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTC_7037c.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_7037c.dir/CheckIncludeFile.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_7037c.dir/CheckIncludeFile.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_7037c/fast' failed
+make[1]: *** [cmTC_7037c/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/event.h exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6ceda/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_6ceda.dir/build.make CMakeFiles/cmTC_6ceda.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6ceda.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing    -o CMakeFiles/cmTC_6ceda.dir/CheckIncludeFile.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:23: fatal error: sys/event.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTC_6ceda.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_6ceda.dir/CheckIncludeFile.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_6ceda.dir/CheckIncludeFile.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_6ceda/fast' failed
+make[1]: *** [cmTC_6ceda/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file mach/mach_time.h exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3690a/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_3690a.dir/build.make CMakeFiles/cmTC_3690a.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3690a.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing    -o CMakeFiles/cmTC_3690a.dir/CheckIncludeFile.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: mach/mach_time.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTC_3690a.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_3690a.dir/CheckIncludeFile.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_3690a.dir/CheckIncludeFile.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3690a/fast' failed
+make[1]: *** [cmTC_3690a/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function kqueue exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7d804/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_7d804.dir/build.make CMakeFiles/cmTC_7d804.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7d804.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=kqueue   -o CMakeFiles/cmTC_7d804.dir/CheckFunctionExistsEx.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/lib/mbed-edge/lib/libevent/libevent/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_7d804
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d804.dir/link.txt --verbose=1
+/usr/bin/cc  -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=kqueue    CMakeFiles/cmTC_7d804.dir/CheckFunctionExistsEx.c.o  -o cmTC_7d804 -rdynamic 
+CMakeFiles/cmTC_7d804.dir/CheckFunctionExistsEx.c.o: In function `main':
+CheckFunctionExistsEx.c:(.text+0x15): undefined reference to `kqueue'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_7d804.dir/build.make:97: recipe for target 'cmTC_7d804' failed
+make[2]: *** [cmTC_7d804] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_7d804/fast' failed
+make[1]: *** [cmTC_7d804/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function port_create exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_91428/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_91428.dir/build.make CMakeFiles/cmTC_91428.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_91428.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=port_create   -o CMakeFiles/cmTC_91428.dir/CheckFunctionExistsEx.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/lib/mbed-edge/lib/libevent/libevent/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_91428
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91428.dir/link.txt --verbose=1
+/usr/bin/cc  -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=port_create    CMakeFiles/cmTC_91428.dir/CheckFunctionExistsEx.c.o  -o cmTC_91428 -rdynamic 
+CMakeFiles/cmTC_91428.dir/CheckFunctionExistsEx.c.o: In function `main':
+CheckFunctionExistsEx.c:(.text+0x15): undefined reference to `port_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_91428.dir/build.make:97: recipe for target 'cmTC_91428' failed
+make[2]: *** [cmTC_91428] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_91428/fast' failed
+make[1]: *** [cmTC_91428/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strlcpy exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0ac2a/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_0ac2a.dir/build.make CMakeFiles/cmTC_0ac2a.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0ac2a.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=strlcpy   -o CMakeFiles/cmTC_0ac2a.dir/CheckFunctionExistsEx.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/lib/mbed-edge/lib/libevent/libevent/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_0ac2a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ac2a.dir/link.txt --verbose=1
+/usr/bin/cc  -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=strlcpy    CMakeFiles/cmTC_0ac2a.dir/CheckFunctionExistsEx.c.o  -o cmTC_0ac2a -rdynamic 
+CMakeFiles/cmTC_0ac2a.dir/CheckFunctionExistsEx.c.o: In function `main':
+CheckFunctionExistsEx.c:(.text+0x15): undefined reference to `strlcpy'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_0ac2a.dir/build.make:97: recipe for target 'cmTC_0ac2a' failed
+make[2]: *** [cmTC_0ac2a] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_0ac2a/fast' failed
+make[1]: *** [cmTC_0ac2a/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function arc4random exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7d535/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_7d535.dir/build.make CMakeFiles/cmTC_7d535.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7d535.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=arc4random   -o CMakeFiles/cmTC_7d535.dir/CheckFunctionExistsEx.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/lib/mbed-edge/lib/libevent/libevent/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_7d535
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d535.dir/link.txt --verbose=1
+/usr/bin/cc  -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=arc4random    CMakeFiles/cmTC_7d535.dir/CheckFunctionExistsEx.c.o  -o cmTC_7d535 -rdynamic 
+CMakeFiles/cmTC_7d535.dir/CheckFunctionExistsEx.c.o: In function `main':
+CheckFunctionExistsEx.c:(.text+0x15): undefined reference to `arc4random'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_7d535.dir/build.make:97: recipe for target 'cmTC_7d535' failed
+make[2]: *** [cmTC_7d535] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_7d535/fast' failed
+make[1]: *** [cmTC_7d535/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function arc4random_buf exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d67a8/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_d67a8.dir/build.make CMakeFiles/cmTC_d67a8.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d67a8.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=arc4random_buf   -o CMakeFiles/cmTC_d67a8.dir/CheckFunctionExistsEx.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/lib/mbed-edge/lib/libevent/libevent/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_d67a8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d67a8.dir/link.txt --verbose=1
+/usr/bin/cc  -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=arc4random_buf    CMakeFiles/cmTC_d67a8.dir/CheckFunctionExistsEx.c.o  -o cmTC_d67a8 -rdynamic 
+CMakeFiles/cmTC_d67a8.dir/CheckFunctionExistsEx.c.o: In function `main':
+CheckFunctionExistsEx.c:(.text+0x15): undefined reference to `arc4random_buf'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d67a8.dir/build.make:97: recipe for target 'cmTC_d67a8' failed
+make[2]: *** [cmTC_d67a8] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_d67a8/fast' failed
+make[1]: *** [cmTC_d67a8/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function issetugid exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_81b06/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_81b06.dir/build.make CMakeFiles/cmTC_81b06.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_81b06.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=issetugid   -o CMakeFiles/cmTC_81b06.dir/CheckFunctionExistsEx.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/lib/mbed-edge/lib/libevent/libevent/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_81b06
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_81b06.dir/link.txt --verbose=1
+/usr/bin/cc  -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=issetugid    CMakeFiles/cmTC_81b06.dir/CheckFunctionExistsEx.c.o  -o cmTC_81b06 -rdynamic 
+CMakeFiles/cmTC_81b06.dir/CheckFunctionExistsEx.c.o: In function `main':
+CheckFunctionExistsEx.c:(.text+0x15): undefined reference to `issetugid'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_81b06.dir/build.make:97: recipe for target 'cmTC_81b06' failed
+make[2]: *** [cmTC_81b06] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_81b06/fast' failed
+make[1]: *** [cmTC_81b06/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function mach_absolute_time exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2e526/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_2e526.dir/build.make CMakeFiles/cmTC_2e526.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2e526.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=mach_absolute_time   -o CMakeFiles/cmTC_2e526.dir/CheckFunctionExistsEx.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/lib/mbed-edge/lib/libevent/libevent/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_2e526
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e526.dir/link.txt --verbose=1
+/usr/bin/cc  -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=mach_absolute_time    CMakeFiles/cmTC_2e526.dir/CheckFunctionExistsEx.c.o  -o cmTC_2e526 -rdynamic 
+CMakeFiles/cmTC_2e526.dir/CheckFunctionExistsEx.c.o: In function `main':
+CheckFunctionExistsEx.c:(.text+0x15): undefined reference to `mach_absolute_time'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_2e526.dir/build.make:97: recipe for target 'cmTC_2e526' failed
+make[2]: *** [cmTC_2e526] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_2e526/fast' failed
+make[1]: *** [cmTC_2e526/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function timeradd exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8f295/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_8f295.dir/build.make CMakeFiles/cmTC_8f295.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8f295.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=timeradd   -o CMakeFiles/cmTC_8f295.dir/CheckFunctionExistsEx.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/lib/mbed-edge/lib/libevent/libevent/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_8f295
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8f295.dir/link.txt --verbose=1
+/usr/bin/cc  -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=timeradd    CMakeFiles/cmTC_8f295.dir/CheckFunctionExistsEx.c.o  -o cmTC_8f295 -rdynamic 
+CMakeFiles/cmTC_8f295.dir/CheckFunctionExistsEx.c.o: In function `main':
+CheckFunctionExistsEx.c:(.text+0x15): undefined reference to `timeradd'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_8f295.dir/build.make:97: recipe for target 'cmTC_8f295' failed
+make[2]: *** [cmTC_8f295] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_8f295/fast' failed
+make[1]: *** [cmTC_8f295/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function timerclear exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_48ca4/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_48ca4.dir/build.make CMakeFiles/cmTC_48ca4.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_48ca4.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=timerclear   -o CMakeFiles/cmTC_48ca4.dir/CheckFunctionExistsEx.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/lib/mbed-edge/lib/libevent/libevent/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_48ca4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_48ca4.dir/link.txt --verbose=1
+/usr/bin/cc  -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=timerclear    CMakeFiles/cmTC_48ca4.dir/CheckFunctionExistsEx.c.o  -o cmTC_48ca4 -rdynamic 
+CMakeFiles/cmTC_48ca4.dir/CheckFunctionExistsEx.c.o: In function `main':
+CheckFunctionExistsEx.c:(.text+0x15): undefined reference to `timerclear'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_48ca4.dir/build.make:97: recipe for target 'cmTC_48ca4' failed
+make[2]: *** [cmTC_48ca4] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_48ca4/fast' failed
+make[1]: *** [cmTC_48ca4/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function timercmp exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7425c/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_7425c.dir/build.make CMakeFiles/cmTC_7425c.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7425c.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=timercmp   -o CMakeFiles/cmTC_7425c.dir/CheckFunctionExistsEx.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/lib/mbed-edge/lib/libevent/libevent/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_7425c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7425c.dir/link.txt --verbose=1
+/usr/bin/cc  -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=timercmp    CMakeFiles/cmTC_7425c.dir/CheckFunctionExistsEx.c.o  -o cmTC_7425c -rdynamic 
+CMakeFiles/cmTC_7425c.dir/CheckFunctionExistsEx.c.o: In function `main':
+CheckFunctionExistsEx.c:(.text+0x15): undefined reference to `timercmp'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_7425c.dir/build.make:97: recipe for target 'cmTC_7425c' failed
+make[2]: *** [cmTC_7425c] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_7425c/fast' failed
+make[1]: *** [cmTC_7425c/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function timerisset exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bdcc5/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_bdcc5.dir/build.make CMakeFiles/cmTC_bdcc5.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bdcc5.dir/CheckFunctionExistsEx.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=timerisset   -o CMakeFiles/cmTC_bdcc5.dir/CheckFunctionExistsEx.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/lib/mbed-edge/lib/libevent/libevent/cmake/CheckFunctionExistsEx.c
+Linking C executable cmTC_bdcc5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bdcc5.dir/link.txt --verbose=1
+/usr/bin/cc  -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=timerisset    CMakeFiles/cmTC_bdcc5.dir/CheckFunctionExistsEx.c.o  -o cmTC_bdcc5 -rdynamic 
+CMakeFiles/cmTC_bdcc5.dir/CheckFunctionExistsEx.c.o: In function `main':
+CheckFunctionExistsEx.c:(.text+0x15): undefined reference to `timerisset'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_bdcc5.dir/build.make:97: recipe for target 'cmTC_bdcc5' failed
+make[2]: *** [cmTC_bdcc5] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_bdcc5/fast' failed
+make[1]: *** [cmTC_bdcc5/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the prototype gethostbyname_r exists for EVENT__HAVE_GETHOSTBYNAME_R_3_ARG failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bff0e/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_bff0e.dir/build.make CMakeFiles/cmTC_bff0e.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bff0e.dir/CheckPrototypeDefinition.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing    -o CMakeFiles/cmTC_bff0e.dir/CheckPrototypeDefinition.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:66: warning: ‘struct hostent_data’ declared inside parameter list
+ int gethostbyname_r(const char *name, struct hostent *hp, struct hostent_data *hdata) {
+                                                                  ^
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:66: warning: its scope is only this definition or declaration, which is probably not what you want
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:5: error: conflicting types for ‘gethostbyname_r’
+ int gethostbyname_r(const char *name, struct hostent *hp, struct hostent_data *hdata) {
+     ^
+In file included from /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:1:0:
+/usr/include/netdb.h:179:12: note: previous declaration of ‘gethostbyname_r’ was here
+ extern int gethostbyname_r (const char *__restrict __name,
+            ^
+CMakeFiles/cmTC_bff0e.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_bff0e.dir/CheckPrototypeDefinition.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_bff0e.dir/CheckPrototypeDefinition.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_bff0e/fast' failed
+make[1]: *** [cmTC_bff0e/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+#include <netdb.h>
+
+
+static void cmakeRequireSymbol(int dummy, ...) {
+  (void) dummy;
+}
+
+static void checkSymbol(void) {
+#ifndef gethostbyname_r
+  cmakeRequireSymbol(0, &gethostbyname_r);
+#endif
+}
+
+int gethostbyname_r(const char *name, struct hostent *hp, struct hostent_data *hdata) {
+  return 0;
+}
+
+#ifdef __CLASSIC_C__
+int main() {
+  int ac;
+  char*av[];
+#else
+int main(int ac, char *av[]) {
+#endif
+  checkSymbol();
+  if (ac > 1000) {
+    return *av[0];
+  }
+  return 0;
+}
+
+
+Determining if the prototype gethostbyname_r exists for EVENT__HAVE_GETHOSTBYNAME_R_5_ARG failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_24725/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_24725.dir/build.make CMakeFiles/cmTC_24725.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_24725.dir/CheckPrototypeDefinition.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing    -o CMakeFiles/cmTC_24725.dir/CheckPrototypeDefinition.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:17: error: conflicting types for ‘gethostbyname_r’
+ struct hostent *gethostbyname_r(const char *name, struct hostent *hp, char *buf, size_t buflen, int *herr) {
+                 ^
+In file included from /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:1:0:
+/usr/include/netdb.h:179:12: note: previous declaration of ‘gethostbyname_r’ was here
+ extern int gethostbyname_r (const char *__restrict __name,
+            ^
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c: In function ‘gethostbyname_r’:
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:15:10: error: ‘NULL’ undeclared (first use in this function)
+   return NULL;
+          ^
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:15:10: note: each undeclared identifier is reported only once for each function it appears in
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:16:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+CMakeFiles/cmTC_24725.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_24725.dir/CheckPrototypeDefinition.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_24725.dir/CheckPrototypeDefinition.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_24725/fast' failed
+make[1]: *** [cmTC_24725/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+#include <netdb.h>
+
+
+static void cmakeRequireSymbol(int dummy, ...) {
+  (void) dummy;
+}
+
+static void checkSymbol(void) {
+#ifndef gethostbyname_r
+  cmakeRequireSymbol(0, &gethostbyname_r);
+#endif
+}
+
+struct hostent *gethostbyname_r(const char *name, struct hostent *hp, char *buf, size_t buflen, int *herr) {
+  return NULL;
+}
+
+#ifdef __CLASSIC_C__
+int main() {
+  int ac;
+  char*av[];
+#else
+int main(int ac, char *av[]) {
+#endif
+  checkSymbol();
+  if (ac > 1000) {
+    return *av[0];
+  }
+  return 0;
+}
+
+
+Determining if the CTL_KERN exist failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a8462/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a8462.dir/build.make CMakeFiles/cmTC_a8462.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a8462.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing    -o CMakeFiles/cmTC_a8462.dir/CheckSymbolExists.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:18: error: lvalue required as unary ‘&’ operand
+   return ((int*)(&CTL_KERN))[argc];
+                  ^
+CMakeFiles/cmTC_a8462.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_a8462.dir/CheckSymbolExists.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_a8462.dir/CheckSymbolExists.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a8462/fast' failed
+make[1]: *** [cmTC_a8462/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+File /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/sysctl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CTL_KERN
+  return ((int*)(&CTL_KERN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the KERN_ARND exist failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9054f/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_9054f.dir/build.make CMakeFiles/cmTC_9054f.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9054f.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing    -o CMakeFiles/cmTC_9054f.dir/CheckSymbolExists.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘KERN_ARND’ undeclared (first use in this function)
+   return ((int*)(&KERN_ARND))[argc];
+                   ^
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+CMakeFiles/cmTC_9054f.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_9054f.dir/CheckSymbolExists.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_9054f.dir/CheckSymbolExists.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9054f/fast' failed
+make[1]: *** [cmTC_9054f/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+File /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/sysctl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef KERN_ARND
+  return ((int*)(&KERN_ARND))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the KERN_RANDOM exist failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_02ad5/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_02ad5.dir/build.make CMakeFiles/cmTC_02ad5.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_02ad5.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing    -o CMakeFiles/cmTC_02ad5.dir/CheckSymbolExists.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:18: error: lvalue required as unary ‘&’ operand
+   return ((int*)(&KERN_RANDOM))[argc];
+                  ^
+CMakeFiles/cmTC_02ad5.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_02ad5.dir/CheckSymbolExists.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_02ad5.dir/CheckSymbolExists.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_02ad5/fast' failed
+make[1]: *** [cmTC_02ad5/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+File /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/sysctl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef KERN_RANDOM
+  return ((int*)(&KERN_RANDOM))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the RANDOM_UUID exist failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b01b2/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_b01b2.dir/build.make CMakeFiles/cmTC_b01b2.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b01b2.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing    -o CMakeFiles/cmTC_b01b2.dir/CheckSymbolExists.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:18: error: lvalue required as unary ‘&’ operand
+   return ((int*)(&RANDOM_UUID))[argc];
+                  ^
+CMakeFiles/cmTC_b01b2.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_b01b2.dir/CheckSymbolExists.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_b01b2.dir/CheckSymbolExists.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_b01b2/fast' failed
+make[1]: *** [cmTC_b01b2/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+File /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/sysctl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef RANDOM_UUID
+  return ((int*)(&RANDOM_UUID))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining size of SSIZE_T failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5113f/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_5113f.dir/build.make CMakeFiles/cmTC_5113f.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5113f.dir/EVENT__SIZEOF_SSIZE_T_UPPER.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing    -o CMakeFiles/cmTC_5113f.dir/EVENT__SIZEOF_SSIZE_T_UPPER.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/EVENT__SIZEOF_SSIZE_T_UPPER.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/EVENT__SIZEOF_SSIZE_T_UPPER.c:22:22: error: ‘SSIZE_T’ undeclared here (not in a function)
+ #define SIZE (sizeof(SSIZE_T))
+                      ^
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/EVENT__SIZEOF_SSIZE_T_UPPER.c:24:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_5113f.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_5113f.dir/EVENT__SIZEOF_SSIZE_T_UPPER.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_5113f.dir/EVENT__SIZEOF_SSIZE_T_UPPER.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_5113f/fast' failed
+make[1]: *** [cmTC_5113f/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CheckTypeSize/EVENT__SIZEOF_SSIZE_T_UPPER.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "sys/types.h"
+#include "sys/socket.h"
+#include "netinet/in.h"
+#include "fcntl.h"
+#include "sys/time.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(SSIZE_T))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Performing C SOURCE FILE Test EVENT__HAVE_WAITPID_WITH_WNOWAIT failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_28cba/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_28cba.dir/build.make CMakeFiles/cmTC_28cba.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_28cba.dir/src.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DEVENT__HAVE_WAITPID_WITH_WNOWAIT   -o CMakeFiles/cmTC_28cba.dir/src.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_28cba
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28cba.dir/link.txt --verbose=1
+/usr/bin/cc  -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DEVENT__HAVE_WAITPID_WITH_WNOWAIT    CMakeFiles/cmTC_28cba.dir/src.c.o  -o cmTC_28cba -rdynamic 
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <stdlib.h>
+
+int
+main(int argc, char** argv)
+{
+    pid_t pid;
+    int status;
+    if ((pid = fork()) == 0) _exit(0);
+    _exit(waitpid(pid, &status, WNOWAIT) == -1);
+}
+Determining if the _MINIX exist failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6441f/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_6441f.dir/build.make CMakeFiles/cmTC_6441f.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6441f.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing    -o CMakeFiles/cmTC_6441f.dir/CheckSymbolExists.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘_MINIX’ undeclared (first use in this function)
+   return ((int*)(&_MINIX))[argc];
+                   ^
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+CMakeFiles/cmTC_6441f.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_6441f.dir/CheckSymbolExists.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_6441f.dir/CheckSymbolExists.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_6441f/fast' failed
+make[1]: *** [cmTC_6441f/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+File /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _MINIX
+  return ((int*)(&_MINIX))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the _POSIX_1_SOURCE exist failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6adb7/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_6adb7.dir/build.make CMakeFiles/cmTC_6adb7.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6adb7.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing    -o CMakeFiles/cmTC_6adb7.dir/CheckSymbolExists.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘_POSIX_1_SOURCE’ undeclared (first use in this function)
+   return ((int*)(&_POSIX_1_SOURCE))[argc];
+                   ^
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+CMakeFiles/cmTC_6adb7.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_6adb7.dir/CheckSymbolExists.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_6adb7.dir/CheckSymbolExists.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_6adb7/fast' failed
+make[1]: *** [cmTC_6adb7/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+File /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _POSIX_1_SOURCE
+  return ((int*)(&_POSIX_1_SOURCE))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C SOURCE FILE Test EVENT__HAVE_STRUCT_SOCKADDR_IN6_SIN6_LEN failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_18277/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_18277.dir/build.make CMakeFiles/cmTC_18277.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_18277.dir/src.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DEVENT__HAVE_STRUCT_SOCKADDR_IN6_SIN6_LEN   -o CMakeFiles/cmTC_18277.dir/src.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/src.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/src.c:8:43: error: ‘struct sockaddr_in6’ has no member named ‘sin6_len’
+    (void)sizeof(((struct sockaddr_in6 *)0)->sin6_len);
+                                           ^
+CMakeFiles/cmTC_18277.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_18277.dir/src.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_18277.dir/src.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_18277/fast' failed
+make[1]: *** [cmTC_18277/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <netinet/in.h>
+#include <sys/socket.h>
+#include <netdb.h>
+
+int main()
+{
+   (void)sizeof(((struct sockaddr_in6 *)0)->sin6_len);
+   return 0;
+}
+
+Performing C SOURCE FILE Test EVENT__HAVE_STRUCT_SOCKADDR_IN_SIN_LEN failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f7748/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_f7748.dir/build.make CMakeFiles/cmTC_f7748.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f7748.dir/src.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DEVENT__HAVE_STRUCT_SOCKADDR_IN_SIN_LEN   -o CMakeFiles/cmTC_f7748.dir/src.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/src.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/src.c:8:43: error: ‘struct sockaddr_in6’ has no member named ‘sin_len’
+    (void)sizeof(((struct sockaddr_in6 *)0)->sin_len);
+                                           ^
+CMakeFiles/cmTC_f7748.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_f7748.dir/src.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_f7748.dir/src.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f7748/fast' failed
+make[1]: *** [cmTC_f7748/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <netinet/in.h>
+#include <sys/socket.h>
+#include <netdb.h>
+
+int main()
+{
+   (void)sizeof(((struct sockaddr_in6 *)0)->sin_len);
+   return 0;
+}
+
+Performing C SOURCE FILE Test EVENT__HAVE_STRUCT_SOCKADDR_STORAGE___SS_FAMILY failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3c319/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_3c319.dir/build.make CMakeFiles/cmTC_3c319.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3c319.dir/src.c.o
+/usr/bin/cc    -fpic -Wall -std=gnu99 -pthread -O0 -Wall -Wswitch -fno-strict-aliasing -DEVENT__HAVE_STRUCT_SOCKADDR_STORAGE___SS_FAMILY   -o CMakeFiles/cmTC_3c319.dir/src.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/src.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/src.c:8:47: error: ‘struct sockaddr_storage’ has no member named ‘__ss_family’
+    (void)sizeof(((struct sockaddr_storage *)0)->__ss_family);
+                                               ^
+CMakeFiles/cmTC_3c319.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_3c319.dir/src.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_3c319.dir/src.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3c319/fast' failed
+make[1]: *** [cmTC_3c319/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <netinet/in.h>
+#include <sys/socket.h>
+#include <netdb.h>
+
+int main()
+{
+   (void)sizeof(((struct sockaddr_storage *)0)->__ss_family);
+   return 0;
+}
+
+Determining if the function _snprintf exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a9455/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a9455.dir/build.make CMakeFiles/cmTC_a9455.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a9455.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=_snprintf   -o CMakeFiles/cmTC_a9455.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a9455
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9455.dir/link.txt --verbose=1
+/usr/bin/cc  -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=_snprintf    CMakeFiles/cmTC_a9455.dir/CheckFunctionExists.c.o  -o cmTC_a9455 -rdynamic 
+CMakeFiles/cmTC_a9455.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `_snprintf'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a9455.dir/build.make:97: recipe for target 'cmTC_a9455' failed
+make[2]: *** [cmTC_a9455] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a9455/fast' failed
+make[1]: *** [cmTC_a9455/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function _vsnprintf exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5500d/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_5500d.dir/build.make CMakeFiles/cmTC_5500d.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5500d.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=_vsnprintf   -o CMakeFiles/cmTC_5500d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5500d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5500d.dir/link.txt --verbose=1
+/usr/bin/cc  -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=_vsnprintf    CMakeFiles/cmTC_5500d.dir/CheckFunctionExists.c.o  -o cmTC_5500d -rdynamic 
+CMakeFiles/cmTC_5500d.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `_vsnprintf'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_5500d.dir/build.make:97: recipe for target 'cmTC_5500d' failed
+make[2]: *** [cmTC_5500d] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_5500d/fast' failed
+make[1]: *** [cmTC_5500d/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function _atoi64 exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c028b/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_c028b.dir/build.make CMakeFiles/cmTC_c028b.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c028b.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=_atoi64   -o CMakeFiles/cmTC_c028b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c028b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c028b.dir/link.txt --verbose=1
+/usr/bin/cc  -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=_atoi64    CMakeFiles/cmTC_c028b.dir/CheckFunctionExists.c.o  -o cmTC_c028b -rdynamic 
+CMakeFiles/cmTC_c028b.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `_atoi64'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c028b.dir/build.make:97: recipe for target 'cmTC_c028b' failed
+make[2]: *** [cmTC_c028b] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c028b/fast' failed
+make[1]: *** [cmTC_c028b/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function _stat32i64 exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_08676/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_08676.dir/build.make CMakeFiles/cmTC_08676.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_08676.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=_stat32i64   -o CMakeFiles/cmTC_08676.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_08676
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08676.dir/link.txt --verbose=1
+/usr/bin/cc  -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=_stat32i64    CMakeFiles/cmTC_08676.dir/CheckFunctionExists.c.o  -o cmTC_08676 -rdynamic 
+CMakeFiles/cmTC_08676.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `_stat32i64'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_08676.dir/build.make:97: recipe for target 'cmTC_08676' failed
+make[2]: *** [cmTC_08676] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_08676/fast' failed
+make[1]: *** [cmTC_08676/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file in6addr.h exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f2a19/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_f2a19.dir/build.make CMakeFiles/cmTC_f2a19.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f2a19.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -fpic -Wall -std=gnu99 -pthread -O0    -o CMakeFiles/cmTC_f2a19.dir/CheckIncludeFile.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:21: fatal error: in6addr.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTC_f2a19.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_f2a19.dir/CheckIncludeFile.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_f2a19.dir/CheckIncludeFile.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f2a19/fast' failed
+make[1]: *** [cmTC_f2a19/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/sockio.h exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f26b6/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_f26b6.dir/build.make CMakeFiles/cmTC_f26b6.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f26b6.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -fpic -Wall -std=gnu99 -pthread -O0    -o CMakeFiles/cmTC_f26b6.dir/CheckIncludeFile.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:24: fatal error: sys/sockio.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTC_f26b6.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_f26b6.dir/CheckIncludeFile.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_f26b6.dir/CheckIncludeFile.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f26b6/fast' failed
+make[1]: *** [cmTC_f26b6/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file vfork.h exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ccbb8/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_ccbb8.dir/build.make CMakeFiles/cmTC_ccbb8.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ccbb8.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -fpic -Wall -std=gnu99 -pthread -O0    -o CMakeFiles/cmTC_ccbb8.dir/CheckIncludeFile.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:19: fatal error: vfork.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTC_ccbb8.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_ccbb8.dir/CheckIncludeFile.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_ccbb8.dir/CheckIncludeFile.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_ccbb8/fast' failed
+make[1]: *** [cmTC_ccbb8/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/capability.h exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fa40e/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_fa40e.dir/build.make CMakeFiles/cmTC_fa40e.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fa40e.dir/CheckIncludeFile.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -fpic -Wall -std=gnu99 -pthread -O0    -o CMakeFiles/cmTC_fa40e.dir/CheckIncludeFile.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: sys/capability.h: No such file or directory
+compilation terminated.
+CMakeFiles/cmTC_fa40e.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_fa40e.dir/CheckIncludeFile.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_fa40e.dir/CheckIncludeFile.c.o] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_fa40e/fast' failed
+make[1]: *** [cmTC_fa40e/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function cap_set_flag exists in the cap failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_168af/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_168af.dir/build.make CMakeFiles/cmTC_168af.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_168af.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=cap_set_flag   -o CMakeFiles/cmTC_168af.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_168af
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_168af.dir/link.txt --verbose=1
+/usr/bin/cc  -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=cap_set_flag    CMakeFiles/cmTC_168af.dir/CheckFunctionExists.c.o  -o cmTC_168af -rdynamic -lcap 
+/usr/bin/ld: cannot find -lcap
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_168af.dir/build.make:97: recipe for target 'cmTC_168af' failed
+make[2]: *** [cmTC_168af] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_168af/fast' failed
+make[1]: *** [cmTC_168af/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function SSL_CTX_set1_param exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f5b88/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_f5b88.dir/build.make CMakeFiles/cmTC_f5b88.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f5b88.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=SSL_CTX_set1_param   -o CMakeFiles/cmTC_f5b88.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f5b88
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f5b88.dir/link.txt --verbose=1
+/usr/bin/cc  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=SSL_CTX_set1_param    CMakeFiles/cmTC_f5b88.dir/CheckFunctionExists.c.o  -o cmTC_f5b88 -rdynamic -levent -levent_core -levent_extra -lm 
+/usr/bin/ld: cannot find -levent
+/usr/bin/ld: cannot find -levent_core
+/usr/bin/ld: cannot find -levent_extra
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f5b88.dir/build.make:97: recipe for target 'cmTC_f5b88' failed
+make[2]: *** [cmTC_f5b88] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f5b88/fast' failed
+make[1]: *** [cmTC_f5b88/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function SSL_set_info_callback exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3087c/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_3087c.dir/build.make CMakeFiles/cmTC_3087c.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3087c.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=SSL_set_info_callback   -o CMakeFiles/cmTC_3087c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3087c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3087c.dir/link.txt --verbose=1
+/usr/bin/cc  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=SSL_set_info_callback    CMakeFiles/cmTC_3087c.dir/CheckFunctionExists.c.o  -o cmTC_3087c -rdynamic -levent -levent_core -levent_extra -lm 
+/usr/bin/ld: cannot find -levent
+/usr/bin/ld: cannot find -levent_core
+/usr/bin/ld: cannot find -levent_extra
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3087c.dir/build.make:97: recipe for target 'cmTC_3087c' failed
+make[2]: *** [cmTC_3087c] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3087c/fast' failed
+make[1]: *** [cmTC_3087c/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function X509_VERIFY_PARAM_set1_host exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_53b80/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_53b80.dir/build.make CMakeFiles/cmTC_53b80.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_53b80.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=X509_VERIFY_PARAM_set1_host   -o CMakeFiles/cmTC_53b80.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_53b80
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53b80.dir/link.txt --verbose=1
+/usr/bin/cc  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=X509_VERIFY_PARAM_set1_host    CMakeFiles/cmTC_53b80.dir/CheckFunctionExists.c.o  -o cmTC_53b80 -rdynamic -levent -levent_core -levent_extra -lm 
+/usr/bin/ld: cannot find -levent
+/usr/bin/ld: cannot find -levent_core
+/usr/bin/ld: cannot find -levent_extra
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_53b80.dir/build.make:97: recipe for target 'cmTC_53b80' failed
+make[2]: *** [cmTC_53b80] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_53b80/fast' failed
+make[1]: *** [cmTC_53b80/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function RSA_set0_key exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0dd78/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_0dd78.dir/build.make CMakeFiles/cmTC_0dd78.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0dd78.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=RSA_set0_key   -o CMakeFiles/cmTC_0dd78.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0dd78
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0dd78.dir/link.txt --verbose=1
+/usr/bin/cc  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=RSA_set0_key    CMakeFiles/cmTC_0dd78.dir/CheckFunctionExists.c.o  -o cmTC_0dd78 -rdynamic -levent -levent_core -levent_extra -lm 
+/usr/bin/ld: cannot find -levent
+/usr/bin/ld: cannot find -levent_core
+/usr/bin/ld: cannot find -levent_extra
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_0dd78.dir/build.make:97: recipe for target 'cmTC_0dd78' failed
+make[2]: *** [cmTC_0dd78] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_0dd78/fast' failed
+make[1]: *** [cmTC_0dd78/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function X509_get_key_usage exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_07f4f/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_07f4f.dir/build.make CMakeFiles/cmTC_07f4f.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_07f4f.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=X509_get_key_usage   -o CMakeFiles/cmTC_07f4f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_07f4f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_07f4f.dir/link.txt --verbose=1
+/usr/bin/cc  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=X509_get_key_usage    CMakeFiles/cmTC_07f4f.dir/CheckFunctionExists.c.o  -o cmTC_07f4f -rdynamic -levent -levent_core -levent_extra -lm 
+/usr/bin/ld: cannot find -levent
+/usr/bin/ld: cannot find -levent_core
+/usr/bin/ld: cannot find -levent_extra
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_07f4f.dir/build.make:97: recipe for target 'cmTC_07f4f' failed
+make[2]: *** [cmTC_07f4f] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_07f4f/fast' failed
+make[1]: *** [cmTC_07f4f/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function SSL_CTX_get0_certificate exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_75525/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_75525.dir/build.make CMakeFiles/cmTC_75525.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_75525.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=SSL_CTX_get0_certificate   -o CMakeFiles/cmTC_75525.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_75525
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75525.dir/link.txt --verbose=1
+/usr/bin/cc  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=SSL_CTX_get0_certificate    CMakeFiles/cmTC_75525.dir/CheckFunctionExists.c.o  -o cmTC_75525 -rdynamic -levent -levent_core -levent_extra -lm 
+/usr/bin/ld: cannot find -levent
+/usr/bin/ld: cannot find -levent_core
+/usr/bin/ld: cannot find -levent_extra
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_75525.dir/build.make:97: recipe for target 'cmTC_75525' failed
+make[2]: *** [cmTC_75525] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_75525/fast' failed
+make[1]: *** [cmTC_75525/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function SSL_get0_alpn_selected exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_833ed/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_833ed.dir/build.make CMakeFiles/cmTC_833ed.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_833ed.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=SSL_get0_alpn_selected   -o CMakeFiles/cmTC_833ed.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_833ed
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_833ed.dir/link.txt --verbose=1
+/usr/bin/cc  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=SSL_get0_alpn_selected    CMakeFiles/cmTC_833ed.dir/CheckFunctionExists.c.o  -o cmTC_833ed -rdynamic -levent -levent_core -levent_extra -lm 
+/usr/bin/ld: cannot find -levent
+/usr/bin/ld: cannot find -levent_core
+/usr/bin/ld: cannot find -levent_extra
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_833ed.dir/build.make:97: recipe for target 'cmTC_833ed' failed
+make[2]: *** [cmTC_833ed] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_833ed/fast' failed
+make[1]: *** [cmTC_833ed/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function SSL_set_alpn_protos exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_70bb6/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_70bb6.dir/build.make CMakeFiles/cmTC_70bb6.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_70bb6.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=SSL_set_alpn_protos   -o CMakeFiles/cmTC_70bb6.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_70bb6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_70bb6.dir/link.txt --verbose=1
+/usr/bin/cc  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=SSL_set_alpn_protos    CMakeFiles/cmTC_70bb6.dir/CheckFunctionExists.c.o  -o cmTC_70bb6 -rdynamic -levent -levent_core -levent_extra -lm 
+/usr/bin/ld: cannot find -levent
+/usr/bin/ld: cannot find -levent_core
+/usr/bin/ld: cannot find -levent_extra
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_70bb6.dir/build.make:97: recipe for target 'cmTC_70bb6' failed
+make[2]: *** [cmTC_70bb6] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_70bb6/fast' failed
+make[1]: *** [cmTC_70bb6/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function TLS_client_method exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_70bcb/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_70bcb.dir/build.make CMakeFiles/cmTC_70bcb.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_70bcb.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=TLS_client_method   -o CMakeFiles/cmTC_70bcb.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_70bcb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_70bcb.dir/link.txt --verbose=1
+/usr/bin/cc  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=TLS_client_method    CMakeFiles/cmTC_70bcb.dir/CheckFunctionExists.c.o  -o cmTC_70bcb -rdynamic -levent -levent_core -levent_extra -lm 
+/usr/bin/ld: cannot find -levent
+/usr/bin/ld: cannot find -levent_core
+/usr/bin/ld: cannot find -levent_extra
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_70bcb.dir/build.make:97: recipe for target 'cmTC_70bcb' failed
+make[2]: *** [cmTC_70bcb] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_70bcb/fast' failed
+make[1]: *** [cmTC_70bcb/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Determining if the function TLSv1_2_client_method exists failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_17678/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_17678.dir/build.make CMakeFiles/cmTC_17678.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_17678.dir/CheckFunctionExists.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=TLSv1_2_client_method   -o CMakeFiles/cmTC_17678.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_17678
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_17678.dir/link.txt --verbose=1
+/usr/bin/cc  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DCHECK_FUNCTION_EXISTS=TLSv1_2_client_method    CMakeFiles/cmTC_17678.dir/CheckFunctionExists.c.o  -o cmTC_17678 -rdynamic -levent -levent_core -levent_extra -lm 
+/usr/bin/ld: cannot find -levent
+/usr/bin/ld: cannot find -levent_core
+/usr/bin/ld: cannot find -levent_extra
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_17678.dir/build.make:97: recipe for target 'cmTC_17678' failed
+make[2]: *** [cmTC_17678] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_17678/fast' failed
+make[1]: *** [cmTC_17678/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+
+Performing C SOURCE FILE Test LWS_HAVE_PIPE2 failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4d1a0/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_4d1a0.dir/build.make CMakeFiles/cmTC_4d1a0.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4d1a0.dir/src.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DLWS_HAVE_PIPE2   -o CMakeFiles/cmTC_4d1a0.dir/src.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_4d1a0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d1a0.dir/link.txt --verbose=1
+/usr/bin/cc  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DLWS_HAVE_PIPE2    CMakeFiles/cmTC_4d1a0.dir/src.c.o  -o cmTC_4d1a0 -rdynamic -levent -levent_core -levent_extra -lm 
+/usr/bin/ld: cannot find -levent
+/usr/bin/ld: cannot find -levent_core
+/usr/bin/ld: cannot find -levent_extra
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_4d1a0.dir/build.make:97: recipe for target 'cmTC_4d1a0' failed
+make[2]: *** [cmTC_4d1a0] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_4d1a0/fast' failed
+make[1]: *** [cmTC_4d1a0/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+Source file was:
+#define _GNU_SOURCE
+#include <unistd.h>
+int main(void) {int fd[2];
+ return pipe2(fd, 0);
+}
+
+Performing C SOURCE FILE Test LWS_HAVE_TCP_USER_TIMEOUT failed with the following output:
+Change Dir: /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_653b9/fast"
+make[1]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_653b9.dir/build.make CMakeFiles/cmTC_653b9.dir/build
+make[2]: Entering directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_653b9.dir/src.c.o
+/usr/bin/cc  -DKEYWORD=__inline  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DLWS_HAVE_TCP_USER_TIMEOUT   -o CMakeFiles/cmTC_653b9.dir/src.c.o   -c /home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_653b9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_653b9.dir/link.txt --verbose=1
+/usr/bin/cc  -Wall -Wsign-compare -Wignored-qualifiers -Wtype-limits -Wuninitialized -Werror -fvisibility=hidden -Wundef  -O3 -fpic -Wall -std=gnu99 -pthread -O0 -DLWS_HAVE_TCP_USER_TIMEOUT    CMakeFiles/cmTC_653b9.dir/src.c.o  -o cmTC_653b9 -rdynamic -levent -levent_core -levent_extra -lm 
+/usr/bin/ld: cannot find -levent
+/usr/bin/ld: cannot find -levent_core
+/usr/bin/ld: cannot find -levent_extra
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_653b9.dir/build.make:97: recipe for target 'cmTC_653b9' failed
+make[2]: *** [cmTC_653b9] Error 1
+make[2]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_653b9/fast' failed
+make[1]: *** [cmTC_653b9/fast] Error 2
+make[1]: Leaving directory '/home/kornic/hckim_temp/mbed_edge_kornic/build-debug/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <netinet/tcp.h>
+int main(void) { return TCP_USER_TIMEOUT; }
+

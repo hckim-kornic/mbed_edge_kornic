@@ -1,0 +1,2 @@
+/usr/bin/ar qc libedge-time.a  CMakeFiles/edge-time.dir/edge_time.c.o
+/usr/bin/ranlib libedge-time.a

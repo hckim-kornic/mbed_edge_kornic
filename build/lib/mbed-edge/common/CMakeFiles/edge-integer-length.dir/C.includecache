@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../lib/mbed-edge/include/common/integer_length.h
+stdint.h
+-
+
+/home/kornic/test_source/mbed_edge_kornic/lib/mbed-edge/common/integer_length.c
+stdint.h
+-
+stdlib.h
+-
+string.h
+-
+common/integer_length.h
+/home/kornic/test_source/mbed_edge_kornic/lib/mbed-edge/common/common/integer_length.h
+

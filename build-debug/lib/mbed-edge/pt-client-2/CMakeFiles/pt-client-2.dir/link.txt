@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpt-client-2.a  CMakeFiles/pt-client-2.dir/pt_certificate_api.c.o CMakeFiles/pt-client-2.dir/pt_certificate_parser.c.o CMakeFiles/pt-client-2.dir/pt_device_object.c.o CMakeFiles/pt-client-2.dir/pt_api.c.o CMakeFiles/pt-client-2.dir/pt_service_api.c.o CMakeFiles/pt-client-2.dir/pt_crypto_api.c.o CMakeFiles/pt-client-2.dir/client.c.o CMakeFiles/pt-client-2.dir/__/edge-rpc/rpc_timeout_api.c.o
+/usr/bin/ranlib libpt-client-2.a

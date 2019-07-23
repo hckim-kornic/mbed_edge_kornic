@@ -1,0 +1,6 @@
+[submodule "lib/docopt.c"]
+	path = lib/docopt.c
+	url = https://github.com/docopt/docopt.c
+[submodule "lib/mbed-edge"]
+	path = lib/mbed-edge
+	url = https://github.com/ARMmbed/mbed-edge

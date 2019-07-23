@@ -1,0 +1,2 @@
+/usr/bin/ar qc libnanostack.a  CMakeFiles/nanostack.dir/__/lib/mbed-cloud-client/nanostack-libservice/source/libList/ns_list.c.o CMakeFiles/nanostack.dir/__/lib/mbed-cloud-client/nanostack-libservice/source/libBits/common_functions.c.o CMakeFiles/nanostack.dir/__/lib/mbed-cloud-client/nanostack-libservice/source/libip6string/stoip6.c.o CMakeFiles/nanostack.dir/__/lib/mbed-cloud-client/nanostack-libservice/source/libip6string/ip6tos.c.o
+/usr/bin/ranlib libnanostack.a
