@@ -1,2 +1,0 @@
-/usr/bin/ar qc librpc.a  CMakeFiles/rpc.dir/rpc.c.o CMakeFiles/rpc.dir/rpc_timeout_api.c.o CMakeFiles/rpc.dir/__/common/edge_time.c.o CMakeFiles/rpc.dir/__/common/edge-mutex/edge_mutex.c.o
-/usr/bin/ranlib librpc.a

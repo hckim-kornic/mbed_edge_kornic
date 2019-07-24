@@ -1,2 +1,0 @@
-/usr/bin/ar qc libedge-websocket-common.a  CMakeFiles/edge-websocket-common.dir/websocket_comm.c.o
-/usr/bin/ranlib libedge-websocket-common.a

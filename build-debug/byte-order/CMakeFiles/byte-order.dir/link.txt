@@ -1,2 +1,0 @@
-/usr/bin/ar qc libbyte-order.a  CMakeFiles/byte-order.dir/byte_order.c.o
-/usr/bin/ranlib libbyte-order.a

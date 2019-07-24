@@ -1,2 +1,0 @@
-/usr/bin/ar qc libedge-trace.a  CMakeFiles/edge-trace.dir/edge_trace.c.o
-/usr/bin/ranlib libedge-trace.a

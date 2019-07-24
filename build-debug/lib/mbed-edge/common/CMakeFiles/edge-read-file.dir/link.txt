@@ -1,2 +1,0 @@
-/usr/bin/ar qc libedge-read-file.a  CMakeFiles/edge-read-file.dir/read_file.c.o
-/usr/bin/ranlib libedge-read-file.a

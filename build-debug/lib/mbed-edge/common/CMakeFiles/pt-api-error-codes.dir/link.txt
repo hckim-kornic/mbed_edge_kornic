@@ -1,2 +1,0 @@
-/usr/bin/ar qc libpt-api-error-codes.a  CMakeFiles/pt-api-error-codes.dir/pt_api_error_codes.c.o
-/usr/bin/ranlib libpt-api-error-codes.a

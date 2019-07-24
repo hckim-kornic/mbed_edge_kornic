@@ -1,2 +1,0 @@
-/usr/bin/ar qc libexamples-common-2.a  CMakeFiles/examples-common-2.dir/ipso_objects.c.o CMakeFiles/examples-common-2.dir/client_config.c.o CMakeFiles/examples-common-2.dir/__/lib/mbed-edge/common/edge_trace.c.o CMakeFiles/examples-common-2.dir/__/lib/mbed-edge/common/read_file.c.o
-/usr/bin/ranlib libexamples-common-2.a

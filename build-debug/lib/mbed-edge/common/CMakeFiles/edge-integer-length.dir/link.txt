@@ -1,2 +1,0 @@
-/usr/bin/ar qc libedge-integer-length.a  CMakeFiles/edge-integer-length.dir/integer_length.c.o
-/usr/bin/ranlib libedge-integer-length.a

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libedge-apr-base64.a  CMakeFiles/edge-apr-base64.dir/apr_base64.c.o
-/usr/bin/ranlib libedge-apr-base64.a

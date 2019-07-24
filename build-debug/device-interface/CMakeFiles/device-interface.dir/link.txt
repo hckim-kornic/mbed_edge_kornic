@@ -1,2 +1,0 @@
-/usr/bin/ar qc libdevice-interface.a  CMakeFiles/device-interface.dir/thermal_zone.c.o CMakeFiles/device-interface.dir/__/lib/mbed-edge/common/edge_trace.c.o CMakeFiles/device-interface.dir/__/lib/mbed-edge/common/read_file.c.o
-/usr/bin/ranlib libdevice-interface.a
