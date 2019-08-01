@@ -141,7 +141,7 @@ int read_serial(int fd, char *data) {
 	memset(read_buffer, 0x00, 64);
 	while (1) {       /* loop for input */
 		bytes_read = read(fd, &read_buffer,64);   
-		if (bytes_read > 5 && bytes_read < 15) {
+		if (bytes_read > 5 && bytes_read < 20) {
 			//read_buffer[bytes_read]=0;               /* '\0' 종료 문자열(printf를 하기 위해) */
 			strncpy(data, read_buffer, bytes_read + 1);
 			if (read_buffer[0]=='z') STOP=1;

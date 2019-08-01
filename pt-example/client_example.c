@@ -767,7 +767,6 @@ retry:
 		    } else {
 			    tr_debug("main_loop: currently in disconnected state. Not writing any values!");
 		    }
-		    sleep(1);
 	    }
     }
     free(test_device_id);
