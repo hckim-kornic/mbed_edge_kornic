@@ -201,7 +201,7 @@ bool ble_services_construct_lightcontrol_from_characteristic(struct ble_device *
     const int digital_count = 2; // Could be replaced by descriptor 0x2909 value (number of digital io's)x
 
     for (int bitfield_offset = 0; bitfield_offset < digital_count; bitfield_offset++) {
-        // Create new instance for this characteristic
+        // Create new instance for this characteristi
         int32_t id = pt_device_get_next_free_object_instance_id(edge_get_connection_id(), device->device_id, object_id);
         if (id < 0 || id > UINT16_MAX) {
             tr_error("Could not create new light control object instance!");

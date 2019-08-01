@@ -10,19 +10,27 @@
 #include <unistd.h>  /* UNIX Standard Definitions 	   */ 
 #include <errno.h>   /* ERROR Number Definitions           */ 
 #define BAUDRATE B115200 
-#define MODEMDEVICE "/dev/ttyACM0" 
+#define MODEMDEVICE "/dev/ttyACM" 
 
 int open_serial() { 
 	int fd; 
-	fd = open(MODEMDEVICE, O_RDWR | O_NOCTTY);	/* ttyUSB0 is the FT232 based USB2SERIAL Converter   */ 
-	if(fd == -1) {						/* Error Checking */ 
-		printf("\n  Error! in Opening ttyUSB0  "); 
-		return fd; 
-	} else { 
-		printf("\n  ttyUSB0 Opened Successfully "); 
-		init_serial(fd); 
-	return fd; 
+	int i = 0;
+	char str_port[16];
+	memset (str_port, 0x00, sizeof(str_port));
+	
+	for (i = 0; i < 2; i++) {
+		sprintf(str_port, "%s%d", MODEMDEVICE, i);
+		fd = open(MODEMDEVICE, O_RDWR | O_NOCTTY);	/* ttyACM */ 
+		if(fd == -1) {						/* Error Checking */ 
+			printf("\n  Error! in Opening ttyACM \n"); 
+		} else {
+			printf("\n  ttyACM Opened Successfully \n"); 
+			init_serial(fd); 
+			break;
+		}
 	}
+
+	return fd; 
 }
 
 
@@ -122,23 +130,25 @@ int read_serial(int fd, char *data) {
 
 	/*------------------------------- Read data from serial port -----------------------------*/
 
-	char read_buffer[128];   /* Buffer to store the data received              */
+	char read_buffer[64];   /* Buffer to store the data received              */
 	int  bytes_read = 0;    /* Number of bytes read by the read() system call */
 	int i = 0;
 	int STOP = 0;
 	char *token = NULL;
 	tcflush(fd, TCIFLUSH);
 
-	memset(read_buffer, 0x00, 128);
+	memset(read_buffer, 0x00, 64);
 	while (1) {       /* loop for input */
-		bytes_read = read(fd, &read_buffer,128);   
+		bytes_read = read(fd, &read_buffer,64);   
 		if (bytes_read > 5 && bytes_read < 15) {
 			//read_buffer[bytes_read]=0;               /* '\0' 종료 문자열(printf를 하기 위해) */
 			strncpy(data, read_buffer, bytes_read + 1);
 			if (read_buffer[0]=='z') STOP=1;
-			memset(read_buffer, 0x00, 128);
+			memset(read_buffer, 0x00, 64);
 			tcflush(fd, TCIFLUSH);
 			return bytes_read;
+		} else if (bytes_read < 0) {
+			return -1;
 		}
 	}
 }

@@ -726,13 +726,14 @@ retry:
     char *test_device_id = malloc(strlen(KORNIC_RASPBERRY) + strlen(args->endpoint_postfix) + 1);
     if (test_device_id) {
 	    pt_status_t status; 
-	    char test_string[128];
+	    char test_string[64];
 	    int count = 0;
-	    memset(test_string, 0x00, 128);
+	    memset(test_string, 0x00, 64);
 	    sprintf(test_device_id, "%s%s", KORNIC_RASPBERRY, args->endpoint_postfix);
 	    status = pt_device_create(g_connection_id,test_device_id, 86400, NONE);
             if (status != PT_STATUS_SUCCESS) {
                 tr_warn("Could not create a device '%s' - error code: %d", test_device_id, (int32_t) status);
+		free(test_device_id);
                 return false;
             }
             ipso_create_sensor_object(g_connection_id, test_device_id, ACCELEROMETER, 0, "SET_POINT", "BLE_POSITION");
@@ -750,24 +751,19 @@ retry:
 		    if (is_connected()) {
 			    if (pt_device_exists(g_connection_id, test_device_id) &&
 					    get_protocol_translator_api_running()) {
-				    //float temperature = tzone_read_cpu_temperature();
-				    /*
-				    ret = get_data(fd, &x, &y);
-				    if (ret == 1)
-					    printf("X = %f, Y = %f\n", x, y);	
-				    float temperature = x;
-				    update_temperature_to_device(cpu_temperature_device_id, temperature);
-				    */
 				    ret = read_serial(fd, test_string);
 				    if (ret > 0)
-					    printf("X = %f, Y = %f\n", x, y);	
+					    printf("X = %s\n", test_string);	
+				    else  {
+					    free(test_device_id);
+					    return false;
+				    }
 				    update_test_to_device(test_device_id, test_string);
 				    pt_devices_update(g_connection_id,
 						    update_object_structure_success_handler,
 						    update_object_structure_failure_handler,
 						    NULL);
 			    }
-
 		    } else {
 			    tr_debug("main_loop: currently in disconnected state. Not writing any values!");
 		    }
