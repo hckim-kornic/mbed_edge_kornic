@@ -17,14 +17,15 @@ int open_serial() {
 	int i = 0;
 	char str_port[16];
 	memset (str_port, 0x00, sizeof(str_port));
-	
-	for (i = 0; i < 2; i++) {
+
+	for (i = 0; i < 3; i++) {
 		sprintf(str_port, "%s%d", MODEMDEVICE, i);
-		fd = open(MODEMDEVICE, O_RDWR | O_NOCTTY);	/* ttyACM */ 
-		if(fd == -1) {						/* Error Checking */ 
-			printf("\n  Error! in Opening ttyACM \n"); 
+		printf("%s\n", str_port);
+		fd = open(str_port, O_RDWR | O_NOCTTY);	// ttyACM 
+		if(fd == -1) {						// Error Checking
+			printf("\n  Error! in Opening ttyACM%d \n", i); 
 		} else {
-			printf("\n  ttyACM Opened Successfully \n"); 
+			printf("\n  /dev/ttyACM%d Opened Successfully \n", i); 
 			init_serial(fd); 
 			break;
 		}
