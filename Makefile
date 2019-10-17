@@ -7,6 +7,7 @@ all: build-all-examples build-all-examples-debug build-doc
 clean:
 	rm -r -f build-doc
 	rm -r -f build
+	rm -r -f build-debug
 	rm -r -f debug-debug
 
 generate-cli-parsers:
@@ -31,7 +32,7 @@ build-mqttpt-example: initialize-cmake-build generate-cli-parsers
 build-blept-example: initialize-cmake-build generate-cli-parsers
 	cd build && cmake .. && make blept-example -j ${JOBS} && cd ..
 
-build-all-examples: build-pt-example build-mqttpt-example build-blept-example
+build-all-examples: build-pt-example build-blept-example
 
 build-doc:
 	mkdir -p build-doc && cd build-doc && cmake .. && make edge-examples-doc
@@ -49,5 +50,5 @@ build-mqttpt-example-debug: initialize-cmake-debug-build generate-cli-parsers
 build-blept-example-debug: initialize-cmake-debug-build generate-cli-parsers
 	cd build-debug && make blept-example -j ${JOBS} && cd ..
 
-build-all-examples-debug: build-pt-example-debug build-mqttpt-example-debug build-blept-example-debug
+build-all-examples-debug: build-pt-example-debug build-blept-example-debug
 
