@@ -42,7 +42,10 @@
 #include "pt-client-2/pt_api.h"
 
 #define CPU_TEMPERATURE_DEVICE "cpu-temperature"
-#define KORNIC_RASPBERRY "kornic-raspberry"
+#define KORNIC_GW "kornic-gateway"
+
+#define NODE_TYPE 0
+#define TAG_TYPE 1
 
 connection_id_t g_connection_id = PT_API_CONNECTION_ID_INVALID;
 sem_t g_shutdown_handler_called;
@@ -494,14 +497,48 @@ static void *malloc_and_memcpy(void *src, size_t size)
     return ret;
 }
 
-void update_test_to_device(const char *device_id, char *position)
+void update_test_to_device(const char *device_id, int type,  char *data)
 {
     uint8_t *value_buffer;
     uint32_t value_len;
+    uint16_t object_id;
+
+    if (type == TAG_TYPE)
+	    object_id = ACCELEROMETER;
+    else 
+	    object_id = TEMPERATURE_SENSOR; 
+
+
+    pt_status_t status = pt_device_get_resource_value(g_connection_id, device_id, object_id, 0, SENSOR_UNITS,
+                                                      &value_buffer, &value_len);
+    if (status != PT_STATUS_SUCCESS) {
+        tr_err("Current %d resource value get failed.", object_id);
+        return;
+    }
+
+    //convert_value_to_host_order_float(value_buffer, &current);
+
+    /* If value changed update it */
+    /* The value is float, do not change the value_size, original size applies */
+    pt_device_set_resource_value(g_connection_id,
+		    device_id,
+		    object_id,
+		    0,
+		    SENSOR_UNITS,
+		    (uint8_t *) data,
+		    strlen(data),
+		    free);
+}
+
+void update_test_to_device1(const char *device_id, char *data)
+{
+    uint8_t *value_buffer;
+    uint32_t value_len;
+
     pt_status_t status = pt_device_get_resource_value(g_connection_id, device_id, ACCELEROMETER, 0, SENSOR_UNITS,
                                                       &value_buffer, &value_len);
     if (status != PT_STATUS_SUCCESS) {
-        tr_err("Current temperature sensor resource value get failed.");
+        tr_err("Current resource value get failed.");
         return;
     }
 
@@ -514,10 +551,11 @@ void update_test_to_device(const char *device_id, char *position)
 		    ACCELEROMETER,
 		    0,
 		    SENSOR_UNITS,
-		    (uint8_t *) position,
-		    strlen(position),
+		    (uint8_t *) data,
+		    strlen(data),
 		    free);
 }
+
 
 
 /**
@@ -722,14 +760,14 @@ retry:
         }
     }
     free(cpu_temperature_device_id);
-#else
-    char *test_device_id = malloc(strlen(KORNIC_RASPBERRY) + strlen(args->endpoint_postfix) + 1);
+    /*
+    char *test_device_id = malloc(strlen(KORNIC_GW) + strlen(args->endpoint_postfix) + 1);
     if (test_device_id) {
 	    pt_status_t status; 
 	    char test_string[64];
 	    int count = 0;
 	    memset(test_string, 0x00, 64);
-	    sprintf(test_device_id, "%s%s", KORNIC_RASPBERRY, args->endpoint_postfix);
+	    sprintf(test_device_id, "%s%s", KORNIC_GW, args->endpoint_postfix);
 	    status = pt_device_create(g_connection_id,test_device_id, 86400, NONE);
             if (status != PT_STATUS_SUCCESS) {
                 tr_warn("Could not create a device '%s' - error code: %d", test_device_id, (int32_t) status);
@@ -758,7 +796,7 @@ retry:
 					    free(test_device_id);
 					    return false;
 				    }
-				    update_test_to_device(test_device_id, test_string);
+				    update_test_to_device1(test_device_id, test_string);
 				    pt_devices_update(g_connection_id,
 						    update_object_structure_success_handler,
 						    update_object_structure_failure_handler,
@@ -771,7 +809,55 @@ retry:
 	    }
     }
     free(test_device_id);
+   */ 
+#else
+    char *test_device_id = malloc(strlen(KORNIC_GW) + strlen(args->endpoint_postfix) + 1);
+    if (test_device_id) {
+	    pt_status_t status; 
+	    char test_string[64];
+	    int count = 0;
+	    memset(test_string, 0x00, 64);
+	    sprintf(test_device_id, "%s%s", KORNIC_GW, args->endpoint_postfix);
+	    status = pt_device_create(g_connection_id,test_device_id, 86400, NONE);
+	    if (status != PT_STATUS_SUCCESS) {
+		    tr_warn("Could not create a device '%s' - error code: %d", test_device_id, (int32_t) status);
+		    free(test_device_id);
+		    return false;
+	    }
+	    printf("create_devcie\n");
+	    ipso_create_sensor_object(g_connection_id, test_device_id, ACCELEROMETER, 0, "TAG", "TAG_DATA");
+	    ipso_create_sensor_object(g_connection_id, test_device_id, TEMPERATURE_SENSOR, 0, "NODE", "NODE_DATA");
+	    pt_device_register(g_connection_id,
+			    test_device_id,
+			    device_register_success_handler,
+			    device_register_failure_handler, NULL);
 
+	    while (get_keep_running()) {
+		    if (is_shutdown_handler_called()) {
+			    tr_info("Interrupt was received! Shutting down.");
+			    break;
+		    }
+
+		    if (is_connected()) {
+			    if (pt_device_exists(g_connection_id, test_device_id) &&
+					    get_protocol_translator_api_running()) {
+				    ret = read_serial(fd, test_string);
+				    if (ret >= 0) {
+					    update_test_to_device(test_device_id, ret, test_string);
+					    pt_devices_update(g_connection_id,
+							    update_object_structure_success_handler,
+							    update_object_structure_failure_handler,
+							    NULL);
+
+				    }
+			    }
+		    } else {
+			    tr_debug("main_loop: currently in disconnected state. Not writing any values!");
+		    }
+		    //usleep(100000); //100ms
+	    }
+    }
+    free(test_device_id);
 #endif
 }
 

@@ -12,6 +12,9 @@
 #define BAUDRATE B115200 
 #define MODEMDEVICE "/dev/ttyACM" 
 
+#define NODE_TYPE 0
+#define TAG_TYPE 1
+
 int open_serial() { 
 	int fd; 
 	int i = 0;
@@ -127,6 +130,29 @@ int get_data(int fd, float *x, float *y) {
 	}
 }
 
+int get_mtype(char *input_data) {
+	char buff [128];
+	char temp[10] = {0,};
+	int ret;
+
+	strncpy(buff, input_data, strlen(input_data));
+
+	char *token = strtok(buff, ":");
+	if (token != NULL) {
+		ret = strncmp("n_", token, 2);
+		if (ret == 0) {
+			return  NODE_TYPE;
+		} else {
+			ret = strncmp("t_", token, 2);
+			if (ret == 0)
+				return TAG_TYPE;
+		}
+	}
+
+	return -1;
+}
+
+#if 1
 int read_serial(int fd, char *data) {
 
 	/*------------------------------- Read data from serial port -----------------------------*/
@@ -134,7 +160,35 @@ int read_serial(int fd, char *data) {
 	char read_buffer[64];   /* Buffer to store the data received              */
 	int  bytes_read = 0;    /* Number of bytes read by the read() system call */
 	int i = 0;
-	int STOP = 0;
+	int type;
+	char *token = NULL;
+	tcflush(fd, TCIFLUSH);
+
+	memset(read_buffer, 0x00, 64);
+	memset(data, 0x00, 64);
+	while (1) {       /* loop for input */
+		bytes_read = read(fd, &read_buffer,64);   
+		//printf("read data : %s(%ld)\n", read_buffer, strlen(read_buffer));
+		if (bytes_read > 5 && bytes_read < 64) {
+			type = get_mtype(read_buffer);
+			strncpy(data, read_buffer, bytes_read + 1);
+			memset(read_buffer, 0x00, 64);
+			tcflush(fd, TCIFLUSH);
+			return type;
+		} else if (bytes_read < 0) {
+			return -1;
+		}
+	}
+}
+
+#else 
+int read_serial(int fd, char *data) {
+
+	/*------------------------------- Read data from serial port -----------------------------*/
+
+	char read_buffer[64];   /* Buffer to store the data received              */
+	int  bytes_read = 0;    /* Number of bytes read by the read() system call */
+	int i = 0;
 	char *token = NULL;
 	tcflush(fd, TCIFLUSH);
 
@@ -144,7 +198,6 @@ int read_serial(int fd, char *data) {
 		if (bytes_read > 5 && bytes_read < 20) {
 			//read_buffer[bytes_read]=0;               /* '\0' 종료 문자열(printf를 하기 위해) */
 			strncpy(data, read_buffer, bytes_read + 1);
-			if (read_buffer[0]=='z') STOP=1;
 			memset(read_buffer, 0x00, 64);
 			tcflush(fd, TCIFLUSH);
 			return bytes_read;
@@ -153,5 +206,6 @@ int read_serial(int fd, char *data) {
 		}
 	}
 }
+#endif
 
 
